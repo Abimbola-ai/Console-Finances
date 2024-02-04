@@ -101,7 +101,7 @@ let totalChange = 0
 for (let i = 1; i < totalMonths; i++) {
   totalChange += (finances[i][1] - finances[i-1][1])
 }
-let changeProfitLoss = (totalChange / (totalMonths - 1)).toFixed(2)
+let changeProfitLoss = totalChange / (totalMonths - 1)
 
 
 // The greatest increase and the greatest decrease analysis in Profit/Losses (date and difference in the amounts) over the entire period.
@@ -122,7 +122,14 @@ for (let i = 1; i < totalMonths; i++) {
   }
 }
 
-console.log(greatestIncreaseDate, increaseTracker, greatestDecreaseDate,decreaseTracker);
+//Print to console
+console.log('Financial Analysis'); 
+console.log('-------------------');
+console.log('Total Months: ' +  totalMonths); 
+console.log('Total: ' + '$' + totalAmount); 
+console.log('Average Change: ' + changeProfitLoss.toFixed(2)); 
+console.log('Greatest Increase in Profits/Losses: ' + greatestIncreaseDate + ' (' + '$' + increaseTracker + ')');
+console.log('Greatest Decrease in Profits/Losses: ' + greatestDecreaseDate + ' (' + '$' + decreaseTracker + ')');
 
 
 
