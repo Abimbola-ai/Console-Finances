@@ -5,10 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M4 Challenge</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1 style="text-align:center;">Financial Analysis</h1>
+  <div class="analysis">
+    <h1>Financial Analysis</h1>
+  <p id="total-months"></p>
+  <p id="total-amount"></p>
+  <p id="avg-change"></p>
+  <p id="greatest-increase"></p>
+  <p id="greatest-decrease"></p>
+  </div>
+  
   
   <script src="./js/index.js"></script>
+  <script>
+    document.getElementById("total-months").innerHTML = '<b>Total Months: </b>' +  totalMonths;
+    document.getElementById("total-amount").innerHTML = '<b>Total: </b>' + totalAmount;
+    document.getElementById("avg-change").innerHTML = '<b>Average Change: </b>' + changeProfitLoss.toFixed(2);
+    document.getElementById("greatest-increase").innerHTML = '<b>Greatest Increase in Profits/Losses: </b>' + greatestIncreaseDate + ' (' + '$' + increaseTracker + ')';
+    document.getElementById("greatest-decrease").innerHTML = '<b>Greatest Decrease in Profits/Losses: </b>' + greatestDecreaseDate + ' (' + '$' + decreaseTracker + ')'
+  </script>
 </body>
 </html>
