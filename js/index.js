@@ -86,3 +86,43 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+// The total number of months included in the dataset.
+const totalMonths = finances.length;
+
+// The net total amount of Profit/Losses over the entire period.
+let totalAmount = 0
+for (let i = 0; i < totalMonths; i++) {
+  totalAmount += finances[i][1]
+}
+
+// The average of the changes in Profit/Losses over the entire period.
+let totalChange = 0
+for (let i = 1; i < totalMonths; i++) {
+  totalChange += (finances[i][1] - finances[i-1][1])
+}
+let changeProfitLoss = (totalChange / (totalMonths - 1)).toFixed(2)
+
+
+// The greatest increase and the greatest decrease analysis in Profit/Losses (date and difference in the amounts) over the entire period.
+let increaseTracker = 0;
+let decreaseTracker = 0;
+let greatestIncreaseDate = '';
+let greatestDecreaseDate = '';
+for (let i = 1; i < totalMonths; i++) {
+  currentIncrease = (finances[i][1] - finances[i-1][1])
+  if (currentIncrease >= increaseTracker) {
+    increaseTracker = currentIncrease
+    greatestIncreaseDate = finances[i][0]
+  }
+  currentDecrease = (finances[i][1] - finances[i-1][1])
+  if (currentDecrease <= decreaseTracker) {
+    decreaseTracker = currentDecrease
+    greatestDecreaseDate = finances[i][0]
+  }
+}
+
+console.log(greatestIncreaseDate, increaseTracker, greatestDecreaseDate,decreaseTracker);
+
+
+
