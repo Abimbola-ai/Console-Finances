@@ -18,7 +18,7 @@ The following questions where to be answered from the dataset.
 * Clone repository by running in local terminal or Visual Studio Code
 
 ```bash
-git clone ""
+git clone "https://github.com/Abimbola-ai/Console-Finances.git"
 ```
 
 * You can view live demo of project here:
