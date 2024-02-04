@@ -1,5 +1,7 @@
 # Financial Analysis using Javascript
 
+![1707086205813](image/readme/1707086205813.png "Project Image")
+
 ## Project Description
 
 Financial Analysis was performed on a dataset in an array structure using Javascript.
