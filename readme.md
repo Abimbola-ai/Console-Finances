@@ -21,8 +21,7 @@ The following questions where to be answered from the dataset.
 git clone "https://github.com/Abimbola-ai/Console-Finances.git"
 ```
 
-* You can view live demo of project here:
-
+* You can view live demo of project here: [https://abimbola-ai.github.io/Console-Finances/](https://abimbola-ai.github.io/Console-Finances/)
 
 ## License
 
